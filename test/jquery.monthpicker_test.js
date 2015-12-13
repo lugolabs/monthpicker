@@ -11,8 +11,7 @@
     monthpicker = $('#monthpicker-el').monthpicker({
       years: [2015, 2014, 2013]
     });
-    var container = $('.monthpicker-wrp');
-    equal(container.html(),
+    equal($('.monthpicker').html(),
       '<div class=\"years\">' +
         '<select><option>2015</option><option>2014</option><option>2013</option></select>' +
       '</div>' +
@@ -22,37 +21,48 @@
         '<tr><td><button data-value=\"8\">September</button></td><td><button data-value=\"9\">October</button></td><td><button data-value=\"10\">November</button></td><td><button data-value=\"11\">December</button></td></tr></tbody>' +
       '</table>'
     );
-    // monthpicker.monthpicker('destroy');
   });
 
   test('show', 2, function() {
     monthpicker = $('#monthpicker-el').monthpicker({
       years: [2015, 2014, 2013]
     });
-    var container = $('.monthpicker-wrp');
+    var container = $('.monthpicker');
     equal(container.css('display'), 'none');
     monthpicker.trigger('click');
     equal(container.css('display'), 'block');
-    // monthpicker.monthpicker('destroy');
   });
 
   test('hide', function() {
     monthpicker = $('#monthpicker-el').monthpicker({
       years: [2015, 2014, 2013]
     });
-    var container = $('.monthpicker-wrp').css('display', 'block');
+    var container = $('.monthpicker').css('display', 'block');
     $(document).trigger('click');
     equal(container.css('display'), 'none');
-    // monthpicker.monthpicker('destroy');
   });
 
   test('destroy', 2, function() {
     monthpicker = $('#monthpicker-el').monthpicker({
       years: [2015, 2014, 2013]
     });
-    equal($('.monthpicker-wrp').length, 1);
+    equal($('.monthpicker').length, 1);
     monthpicker.monthpicker('destroy');
-    equal($('.monthpicker-wrp').length, 0);
+    equal($('.monthpicker').length, 0);
+  });
+
+  test('onMonthSelect', 2, function() {
+    var selectedMonth, selectedYear;
+    monthpicker = $('#monthpicker-el').monthpicker({
+      years: [2015, 2014, 2013],
+      onMonthSelect: function(monthIndex, year) {
+        selectedMonth = monthIndex;
+        selectedYear = year;
+      }
+    });
+    $('.monthpicker button[data-value="4"]').trigger('click');
+    equal(selectedMonth, 4);
+    equal(selectedYear, 2015);
   });
 
 

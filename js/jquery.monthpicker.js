@@ -62,7 +62,7 @@
             top: linkPosition.top + this._el.height() + (options.topOffset || 0),
             left: linkPosition.left
           };
-        this._container = $('<div class="monthpicker-wrp">')
+        this._container = $('<div class="monthpicker">')
           .css(cssOptions)
           .appendTo($('body'));
       },
