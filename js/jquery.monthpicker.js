@@ -57,12 +57,13 @@
       _render: function() {
         var linkPosition = this._el.position(),
           cssOptions = {
-            display: 'none',
+            display:  'none',
             position: 'absolute',
-            top: linkPosition.top + this._el.height() + (options.topOffset || 0),
-            left: linkPosition.left
+            top:      linkPosition.top + this._el.height() + (options.topOffset || 0),
+            left:     linkPosition.left
           };
-        this._container = $('<div class="monthpicker">')
+        this._id = (new Date).valueOf();
+        this._container = $('<div class="monthpicker" id="monthpicker-' + this._id +'">')
           .css(cssOptions)
           .appendTo($('body'));
       },
@@ -71,7 +72,7 @@
         var markup = $.map(options.years, function(year) {
           return '<option>' + year + '</option>';
         });
-        var yearsWrap = $('<div class="years">').appendTo(this._container);
+        var yearsWrap     = $('<div class="years">').appendTo(this._container);
         this._yearsSelect = $('<select>').html(markup.join('')).appendTo(yearsWrap);
       },
 

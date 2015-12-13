@@ -1,6 +1,8 @@
 jQuery.monthpicker
 ------------------
 
+![jQuerymonthpicker screenshot](http://lugolabs.com/static/jquery_monthpicker_screenshot.jpg)
+
 Pick month and year with this jQuery plugin.
 
 #### Usage
@@ -15,9 +17,9 @@ Example:
 
 ```js
 $('#monthpicker').monthpicker({
-    years: [2015, 2014, 2013, 2012, 2011],
-    topOffset: 6,
-    onMonthSelect: function(m, y) {
+    years:          [2015, 2014, 2013, 2012, 2011],
+    topOffset:      6,
+    onMonthSelect:  function(m, y) {
       console.log('Month: ' + m + ', year: ' + y);
     }
 });
