@@ -1,0 +1,33 @@
+{
+  "name": "monthpicker",
+  "title": "jQuery Monthpicker",
+  "description": "Month picker jQuery plugin",
+  "keywords": [
+    "month",
+    "picker"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Artan Sinani",
+    "url": "https://github.com/rtsinani"
+  },
+  "maintainers": [
+    {
+      "name": "Artan Sinani",
+      "email": "artan@lugolabs.com",
+      "url": "http://www.lugolabs.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/lugolabs/monthpicker/blob/master/MIT-LICENSE"
+    }
+  ],
+  "homepage": "https://github.com/lugolabs/monthpicker",
+  "docs": "https://github.com/lugolabs/monthpicker/tree/master/examples",
+  "download": "https://raw.githubusercontent.com/lugolabs/monthpicker/master/js/jquery.monthpicker.js",
+  "dependencies": {
+      "jquery": ">=1.5"
+  }
+}
