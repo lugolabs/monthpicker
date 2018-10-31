@@ -1,7 +1,7 @@
 jQuery.monthpicker
 ------------------
 
-![jQuerymonthpicker screenshot](http://lugolabs.com/static/jquery_monthpicker_screenshot.jpg)
+![jQuerymonthpicker screenshot](https://www.lugolabs.com/static/jquery_monthpicker_screenshot.png)
 
 Pick month and year with this jQuery plugin.
 
